@@ -15,13 +15,14 @@ def contacto(request):
             nombre=request.POST.get("nombre")
             email=request.POST.get("email")
             contenido=request.POST.get("contenido")
-
+            
             email=EmailMessage("Mensaje desde el el fin del mundo"
             "El usuario con nombre {} con la dirección {} escribe lo siguiente:\n\n {}".format(nombre,email,contenido),
             "",["jvanegasmartinez173@gmail.com"],reply_to=[email])
-
+           
+           
             try:
-                email.send()
+                email.send()  
 
                 return redirect("/contacto/?valido")
         
@@ -29,4 +30,4 @@ def contacto(request):
                 return redirect("/contacto/?novalido")
 
 
-    return render(request,"contacto/contacto.html",{'miFormulario':formulario_contacto})
+        return render(request,"contacto/contacto.html",{'miFormulario':formulario_contacto})

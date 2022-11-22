@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'contacto',
     'tienda',
+    'carro',
 ]
 
 MIDDLEWARE = [
@@ -133,7 +134,7 @@ EMAIL_HOST="smtp.gmail.com"
 EMAIL_USE_TLS=True
 EMAIL_PORT=587
 EMAIL_HOST_USER="jvanegasmartinez173@gmail.com"
-EMAIL__HOST_PASSWORD="Camisara2802*"
+EMAIL_HOST_PASSWORD="Camisara2802*"
 
 
 # Default primary key field type
